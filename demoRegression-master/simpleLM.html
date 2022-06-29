@@ -448,6 +448,9 @@ abline(chesty)</code></pre>
 ## Residual standard error: 4.939 on 52 degrees of freedom
 ## Multiple R-squared:  0.791,  Adjusted R-squared:  0.7869 
 ## F-statistic: 196.7 on 1 and 52 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>The adjusted R-square for this model (CHEST) is 0.79; the model for
+NECK had an adjusted R-square of 0.75.<br />
+So far, the best model is the one based on CHEST.</p>
 <pre class="r"><code>lbs &lt;- lm(LENGTH~HEADLEN,data=bears)
 plot(LENGTH~HEADLEN,data=bears)
 abline(lbs)</code></pre>
@@ -473,27 +476,6 @@ abline(lbs)</code></pre>
 ## F-statistic: 286.3 on 1 and 52 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>The adjusted R-square for this model (HEADLEN) is 0.84 which is the
 best model.</p>
-<pre class="r"><code>new &lt;- data.frame(CHEST=c(17,22,26))
-predict(chesty,new)</code></pre>
-<pre><code>##        1        2        3 
-## 39.62411 44.71241 48.78305</code></pre>
-<pre class="r"><code>predict(chesty,new,se.fit=TRUE)</code></pre>
-<pre><code>## $fit
-##        1        2        3 
-## 39.62411 44.71241 48.78305 
-## 
-## $se.fit
-##         1         2         3 
-## 1.5116862 1.1976743 0.9712363 
-## 
-## $df
-## [1] 52
-## 
-## $residual.scale
-## [1] 4.939419</code></pre>
-<p>The adjusted R-square for this model (CHEST) is 0.79; the model for
-NECK had an adjusted R-square of 0.75.<br />
-So far, the best model is the one based on CHEST.</p>
 </div>
 
 

@@ -42,6 +42,10 @@ abline(chesty)
 summary.lm(chesty)
 ```
  
+ The adjusted R-square for this model (CHEST) is 0.79; the model for NECK had an adjusted R-square of 0.75.  
+So far, the best model is the one based on CHEST.
+ 
+ 
 
 ```{r}
 lbs <- lm(LENGTH~HEADLEN,data=bears)
@@ -49,16 +53,5 @@ plot(LENGTH~HEADLEN,data=bears)
 abline(lbs)
 summary.lm(lbs)
 ```
-The adjusted R-square for this model (HEADLEN) is 0.84 which is the best model.
+The adjusted R-square for this model (HEADLEN) is 0.84 which is the best model.  
 
-
-
-
-```{r}
-new <- data.frame(CHEST=c(17,22,26))
-predict(chesty,new)
-predict(chesty,new,se.fit=TRUE)
-```
-
-The adjusted R-square for this model (CHEST) is 0.79; the model for NECK had an adjusted R-square of 0.75.  
-So far, the best model is the one based on CHEST.
