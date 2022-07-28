@@ -24,6 +24,12 @@ abline(simp)
 summary.lm(simp)
 ```
 
+The gragh shows a linear regression as the straigth line rises from about 40 on the length axis till about 33 on the neck axis and about 80 on the length axis, showing that length increases as the neck increases.    
+Based on the residuals , the median is -0.0822.  
+Adjusted R-squared:  0.7476  
+The P-value is 0.0000000000000002.  
+
+
 ## now predict the length of a bear who has a neck of 17, 22 and 26
 
 
@@ -41,7 +47,8 @@ plot(LENGTH~CHEST,data=bears)
 abline(chesty)
 summary.lm(chesty)
 ```
- 
+
+The gragh shows a linear regression as the straigth line rises from about 40 on the length axis till about 55 on the chest axis and about 80 on the legnth axis, this tells us that length increases as the chest increases.   
  The adjusted R-square for this model (CHEST) is 0.79; the model for NECK had an adjusted R-square of 0.75.  
 So far, the best model is the one based on CHEST.
  
@@ -53,5 +60,9 @@ plot(LENGTH~HEADLEN,data=bears)
 abline(lbs)
 summary.lm(lbs)
 ```
+
+The gragh shows a linear regression as the straigth line rises from about 39 on the length axis till about 18 on the headlen axis and about 80 on the legnth axis, this tells us that length increases as the head increases.  
+The p-value of is 0.00000000000000002, the median is 0.2942, the maximum value is 11.1708 and the minimum value is -9.6037.  
+The multi[le R-squared is 0.8463.  
 The adjusted R-square for this model (HEADLEN) is 0.84 which is the best model.  
 
